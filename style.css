@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, 'Times New Roman', serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.4s, color 0.4s;
+}
+body.guardians {
+  --bg: linear-gradient(to bottom, #e0f2e9, #c9e4d6);
+  --text: #21392b;
+}
+body.outcasts {
+  --bg: linear-gradient(to bottom, #1a0f0f, #3d1f1f);
+  --text: #f0e6dc;
+}
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: rgba(255,255,255,0.95);
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.12);
+  padding: 36px 32px 40px 32px;
+  transition: background 0.4s, color 0.4s;
+}
+body.outcasts .container {
+  background: rgba(36, 20, 20, 0.90);
+  color: #f0e6dc;
+}
+h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+.theme-switch {
+  text-align: center;
+  margin: 18px 0 20px 0;
+}
+.theme-switch button {
+  margin: 0 10px 0 0;
+  padding: 9px 26px;
+  border: none;
+  border-radius: 7px;
+  background: #369c69;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.25s, box-shadow 0.2s;
+  box-shadow: 0 2px 10px rgba(60,90,70,0.08);
+  position: relative;
+  z-index: 1;
+}
+body.outcasts .theme-switch button {
+  background: #ab2525;
+}
+.theme-switch button:last-child {
+  margin-right: 0;
+}
+#gen-btn {
+  display: block;
+  margin: 28px auto 0 auto;
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 15px 46px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(93deg, #48ce98, #369c69 80%);
+  color: #fff;
+  box-shadow: 0 2px 16px rgba(58,130,110,0.16), 0 1px 4px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: background 0.25s, box-shadow 0.17s, transform 0.11s;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 2;
+}
+#gen-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 6px rgba(30,70,60,0.11);
+}
+#gen-btn:hover { background: linear-gradient(93deg, #63edb5, #369c69 80%);}
+body.outcasts #gen-btn {
+  background: linear-gradient(100deg, #d06a47, #ab2525 70%);
+  color: #fff;
+  box-shadow: 0 2px 16px rgba(172,80,60,0.12), 0 1px 4px rgba(0,0,0,0.07);
+}
+body.outcasts #gen-btn:hover {
+  background: linear-gradient(100deg, #f39a7a, #ab2525 80%);
+}
+.desc { margin-bottom: 26px; }
+.show-more {
+  display: inline-block;
+  margin-top: 12px;
+  color: #389177;
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: underline;
+  transition: color 0.15s;
+}
+body.outcasts .show-more { color: #edaba6; }
+.hidden { display: none !important; }
+#desc-extra {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.55s cubic-bezier(0.39,0.58,0.57,1), opacity 0.39s cubic-bezier(0.39,0.58,0.57,1);
+  will-change: max-height, opacity;
+}
+#desc-extra.open {
+  opacity: 1;
+  max-height: 1400px;
+  margin-top: 12px;
+}
+#generator { margin: 38px 0 0 0; min-height: 135px;}
+.gen-block {
+  animation: fadeIn 0.7s;
+  background: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+.gen-block h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+.variants {
+  text-align: center;
+  color: #599984;
+  margin-bottom: 18px;
+  margin-top: 0;
+}
+body.outcasts .variants { color: #eda6a6; }
+.meanings-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+}
+.meanings-table td {
+  padding: 7px 9px 7px 0;
+  border-bottom: 1px dashed #b0c8b0;
+  font-size: 18px;
+}
+body.outcasts .meanings-table td { border-bottom: 1px dashed #ad7676; }
+.meanings-table td:first-child {
+  font-weight: bold;
+  width: 1%;
+  white-space: nowrap;
+}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(12px);} to{opacity:1;transform:none;} }
+
+
+
+
+
+
+body.outcasts 
+body.outcasts 
+body.outcasts 
+
+.theme-switch { text-align: center; margin: 18px 0 20px 0;}
+.theme-switch 
+.theme-switch 
+#gen-btn
+
+/* Button Styles */
+.magic-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s, color 0.3s;
+  outline: none;
+}
+.magic-btn:focus {
+  outline: none;
+}
+
+/* Guardians Theme Buttons */
+body.guardians .magic-btn {
+  background: linear-gradient(45deg, #3BA55D, #9B59B6) !important;
+  color: white;
+}
+body.guardians .magic-btn:hover,
+body.guardians .magic-btn.active {
+  box-shadow: 0 0 8px 2px rgba(155,89,182,0.7);
+}
+
+/* Outcasts Theme Buttons */
+body.outcasts .magic-btn {
+  background: linear-gradient(45deg, #000000, #E74C3C) !important;
+  color: white;
+}
+
+body.guardians .custom-block {
+  background: linear-gradient(45deg, #3BA55D, #9B59B6);
+  color: white;
+}
+
+body.guardians .custom-block h2 {
+  color: #1d0431;
+  text-shadow: 0 0 16px white, 0 0 20px white;
+}
+
+body.outcasts .custom-block {
+  background: linear-gradient(45deg, #000000, #E74C3C);
+  color: #f0e6dc;
+}
+
+body.outcasts .custom-block h2 {
+  color: #ffffff;
+  text-shadow: 0 0 16px #000000, 0 0 20px #000000;
+}
+
+.custom-block {
+  margin-top: 40px;
+  }
+
+  .custom-block {
+  padding: 24px 32px;
+  }
+
+  .custom-block {
+    border-radius: 15px;
+  }
+
+  body.outcasts .magic-btn:hover,
+body.outcasts .magic-btn.active {
+  box-shadow: 0 0 8px 2px #e74c3c;
+}
+
+.custom-block.fade-in {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
