@@ -7,8 +7,8 @@ body {
   transition: background 0.4s, color 0.4s;
 }
 body.guardians {
-  --bg: linear-gradient(to bottom, #e0f2e9, #c9e4d6);
-  --text: #21392b;
+  --bg: linear-gradient(to bottom, #bed9b3, #90d1a8);
+  --text: #215444;
 }
 body.outcasts {
   --bg: linear-gradient(to bottom, #1a0f0f, #3d1f1f);
@@ -180,23 +180,37 @@ body.outcasts
 
 /* Guardians Theme Buttons */
 body.guardians .magic-btn {
-  background: linear-gradient(45deg, #3BA55D, #9B59B6) !important;
-  color: white;
+  background: linear-gradient(90deg, #6ea68b, #bed9b3);
+  color: #1e3e30;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  box-shadow: 0 0 10px rgba(144, 209, 168, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 body.guardians .magic-btn:hover,
 body.guardians .magic-btn.active {
-  box-shadow: 0 0 8px 2px rgba(155,89,182,0.7);
+  box-shadow: 0 0 8px 2px rgba(98, 182, 89, 0.7);
 }
 
 /* Outcasts Theme Buttons */
 body.outcasts .magic-btn {
   background: linear-gradient(45deg, #000000, #E74C3C) !important;
   color: white;
+  border-radius: 15px
 }
 
 body.guardians .custom-block {
-  background: linear-gradient(45deg, #3BA55D, #9B59B6);
-  color: white;
+  background: linear-gradient(180deg, #e2f5ea, #c4e9d8);
+  border-radius: 14px;
+  padding: 24px;
+  margin-top: 30px;
+  color: #1f3f32;
+  box-shadow: 0 0 14px rgba(100, 150, 120, 0.3);
+  border: 1px solid #b5ddca;
 }
 
 body.guardians .custom-block h2 {
@@ -242,4 +256,599 @@ body.outcasts .magic-btn.active {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.theme-toggle-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  background: transparent;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.theme-toggle.active {
+  background: currentColor;
+  color: rgba(217, 217, 217, 0.436);
+  box-shadow: 0 0 6px rgba(0,0,0,0.3);
+}
+
+.floating-theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 6px 8px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.outcasts .floating-theme-toggle {
+  background: rgba(20, 10, 10, 0.85);
+}
+
+body.spiritual {
+  --bg: linear-gradient(to bottom, #1e1835, #352c54);
+  --text: #e8e6f5;
+  background: var(--bg);
+  color: var(--text);
+}
+
+body.spiritual .container {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.3);
+}
+
+body.spiritual a {
+  color: #c2aaff;
+  text-decoration: underline;
+}
+
+body.spiritual h1, 
+body.spiritual h2 {
+  color: #d3c3ff;
+  text-shadow: 0 0 8px rgba(190, 160, 255, 0.4);
+}
+
+body.spiritual img {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 16px rgba(200, 180, 255, 0.1);
+  border-radius: 12px;
+}
+
+blockquote {
+  font-style: italic;
+  padding: 16px;
+  margin: 20px 0;
+  background: rgba(255, 255, 255, 0.06);
+  border-left: 4px solid #a88bd6;
+}
+
+/* Кнопка возврата для темы Spiritual */
+body.spiritual .home-btn {
+  background: linear-gradient(45deg, #b495ff, #6dcfe3);
+  color: #1e1835;
+  box-shadow: 0 0 10px rgba(178, 144, 255, 0.5);
+  border-radius: 15px
+}
+
+body.spiritual .home-btn:hover {
+  background: linear-gradient(45deg, #d6baff, #8fe0f3);
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+  border-radius: 15px
+}
+
+
+/* === Spiritual Theme === */
+
+body.spiritual {
+  --bg: radial-gradient(ellipse at top, #0b0f2f, #000000);
+  --text: #d8d0ff;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.spirit-button {
+  display: inline-block;
+  background: linear-gradient(90deg, #6b5b95, #b8a9c9);
+  color: white;
+  padding: 12px 24px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(150, 130, 255, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.spirit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(200, 180, 255, 0.8);
+}
+
+.button-group {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer-note {
+  text-align: center;
+  margin-top: 50px;
+  font-style: italic;
+  font-size: 0.9em;
+  color: #a99ad3;
+}
+
+
+/* === Light Spiritual Theme === */
+
+body.light-spiritual {
+  --bg: linear-gradient(to bottom, #f8f4ff, #ece5f6);
+  --text: #4a3a6a;
+}
+
+body.light-spiritual .spirit-button {
+  background: linear-gradient(90deg, #cbb4ec, #e6d6f5);
+  color: #4a3a6a;
+  box-shadow: 0 0 10px rgba(200, 180, 255, 0.4);
+}
+
+body.light-spiritual .spirit-button:hover {
+  box-shadow: 0 0 15px rgba(220, 200, 255, 0.7);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg) scale(1.1);
+}
+
+body.spiritual .theme-toggle svg path {
+  fill: #d8d0ff;
+}
+
+body.light-spiritual .theme-toggle svg path {
+  fill: #4a3a6a;
+}
+
+
+/* === Spiritual Button Fix and SVG Toggle === */
+
+/* --- Updated spiritual theme buttons --- */
+body.spiritual .spirit-button {
+  background: linear-gradient(90deg, #6a4dad, #a88eda);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 24px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  text-shadow: 0 0 5px rgba(255,255,255,0.6);
+  box-shadow: 0 0 10px rgba(180, 160, 255, 0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+body.spiritual .spirit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(200, 180, 255, 0.9);
+}
+
+/* --- SVG Toggle Button Appearance --- */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 1000;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(20deg) scale(1.1);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+body.spiritual .theme-toggle svg path {
+  fill: #d8d0ff;
+}
+
+body.light-spiritual .theme-toggle svg path {
+  fill: #4a3a6a;
+}
+
+
+/* === Updated Guardians Theme === */
+
+body.guardians {
+  --bg: linear-gradient(to bottom, #bed9b3, #90d1a8);
+  --text: #215444;
+}
+
+body.guardians .spirit-button {
+  background: linear-gradient(90deg, #6ea68b, #bed9b3);
+  color: #1e3e30;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(144, 209, 168, 0.4);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+body.guardians .spirit-button:hover {
+  box-shadow: 0 0 15px rgba(190, 217, 179, 0.9);
+}
+
+
+/* === Guardians UI Styling === */
+
+/* === Guardians UI Buttons === */
+body.guardians .faction-buttons a {
+  background: linear-gradient(90deg, #5f7f6d, #90d1a8);
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 5px;
+  display: inline-block;
+  box-shadow: 0 0 8px rgba(95, 127, 109, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+body.guardians .faction-buttons a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(144, 209, 168, 0.8);
+}
+
+body.guardians .spirit-button {
+  background: linear-gradient(90deg, #6ea68b, #bed9b3);
+  color: #1e3e30;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(144, 209, 168, 0.4);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+body.guardians .spirit-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(190, 217, 179, 0.9);
+}
+
+/* === Output Container === */
+body.guardians .output-container {
+  background: linear-gradient(180deg, #d8efe2, #bce0cb);
+  color: #215444;
+  border: 1px solid #a4cdb2;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(144, 209, 168, 0.3);
+}
+
+/* === Inner Headings === */
+body.guardians h1,
+body.guardians h2 {
+  color: #215444;
+}
+
+
+/* === Guardians Detailed Styling === */
+
+/* === Guardians button and output styling === */
+
+body.guardians .spirit-button,
+body.guardians .faction-buttons button {
+  background: linear-gradient(90deg, #6ea68b, #bed9b3);
+  color: #1e3e30;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin: 5px;
+  box-shadow: 0 0 8px rgba(144, 209, 168, 0.3);
+  transition: transform 0.2s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+body.guardians .spirit-button:hover,
+body.guardians .faction-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(144, 209, 168, 0.7);
+}
+
+/* Генераторное имя и формы */
+body.guardians .output-container {
+  background: linear-gradient(180deg, #e2f5ea, #c4e9d8);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 30px;
+  box-shadow: 0 0 10px rgba(120, 180, 140, 0.2);
+  color: #1e3e30;
+}
+
+/* Заголовок блока про имя */
+body.guardians .output-container h2 {
+  color: #215444;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
+}
+
+/* Секция описания частей имени */
+body.guardians .output-container .name-parts {
+  background: #d8efe2;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 15px;
+  box-shadow: inset 0 0 6px rgba(100, 150, 120, 0.2);
+}
+
+/* Текстовые блоки-пояснения */
+body.guardians .explanation {
+  background: linear-gradient(180deg, #e7f6ee, #cfe8d8);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(100, 160, 130, 0.2);
+  color: #234f3c;
+}
+
+
+
+/* === Guardians refined styling (matches real HTML) === */
+
+body.guardians {
+  --bg: linear-gradient(to bottom, #bed9b3, #90d1a8);
+  --text: #215444;
+}
+
+body.guardians {
+  --bg: linear-gradient(to bottom, #bed9b3, #90d1a8);
+  --text: #215444;
+}
+
+/* Main result panel & explanations */
+body.guardians #output-container,
+body.guardians .explanation {
+  background: var(--panel-bg);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(120, 180, 140, 0.25);
+}
+
+/* Forms list (другие формы) */
+body.guardians #output-forms {
+  color: var(--text-main);
+}
+
+/* Buttons: faction switchers & generate */
+body.guardians .faction-buttons button,
+body.guardians .generate-button {
+  background: linear-gradient(90deg, #8ecfb2, #c6e3d2);
+  color: #194d3b;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  margin-top: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(144, 209, 168, 0.4);
+}
+
+body.guardians .faction-buttons button:hover,
+body.guardians .generate-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(100, 160, 130, 0.7);
+}
+
+/* Active/selected faction button */
+body.guardians .faction-buttons .active {
+  outline: 2px solid #1e3e30;
+  box-shadow: 0 0 15px rgba(100, 160, 130, 0.8);
+}
+
+/* Headings inside result */
+body.guardians .output-title,
+body.guardians .output-container h2 {
+  color: var(--text-main);
+}
+
+
+/* === Real Guardians Styling Fix === */
+
+/* === Guardians: реалистичная стилизация элементов генератора === */
+
+body.guardians .faction-buttons button {
+  background: linear-gradient(90deg, #6ea68b, #bed9b3);
+  color: #1e3e30;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin: 5px;
+  box-shadow: 0 0 8px rgba(144, 209, 168, 0.3);
+  transition: transform 0.2s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+body.guardians .faction-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(144, 209, 168, 0.6);
+}
+
+body.guardians .generate-button {
+  background: linear-gradient(90deg, #8ecfb2, #c6e3d2);
+  color: #194d3b;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  margin-top: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(144, 209, 168, 0.4);
+}
+
+body.guardians .generate-button:hover {
+  box-shadow: 0 0 16px rgba(144, 209, 168, 0.6);
+}
+
+body.guardians #output-container {
+  background: linear-gradient(to bottom, #e3f4eb, #c7e5d6);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 30px;
+  box-shadow: 0 0 12px rgba(100, 160, 130, 0.2);
+  color: #1f3f32;
+}
+
+body.guardians #output-container h2 {
+  color: #215444;
+}
+
+body.guardians #output-forms {
+  color: #234f3c;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+body.guardians .name-part {
+  font-weight: bold;
+  color: #1e4c39;
+}
+
+body.guardians .meaning {
+  margin-left: 10px;
+  color: #2c5e4d;
+}
+
+body.guardians .explanation {
+  background: linear-gradient(to bottom, #e9f7f0, #d5eadf);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 8px rgba(120, 180, 140, 0.2);
+  color: #204d3a;
+}
+
+
+/* === Guardians: custom-block and magic-btn === */
+
+/* === Guardians: .custom-block and .magic-btn === */
+
+body.guardians .custom-block {
+  background: linear-gradient(180deg, #e2f5ea, #c4e9d8);
+  border-radius: 14px;
+  padding: 24px;
+  margin-top: 30px;
+  color: #1f3f32;
+  box-shadow: 0 0 14px rgba(100, 150, 120, 0.3);
+  border: 1px solid #b5ddca;
+}
+
+body.guardians .custom-block h2 {
+  color: #215444;
+  margin-bottom: 12px;
+}
+
+body.guardians .magic-btn {
+  background: linear-gradient(90deg, #6ea68b, #bed9b3);
+  color: #1e3e30;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  box-shadow: 0 0 10px rgba(144, 209, 168, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+body.guardians .magic-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(144, 209, 168, 0.7);
+}
+
+
+/* === Back Button Thematic Styling === */
+
+/* === Back Button Base Style === */
+.back-button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: bold;
+  margin: 40px auto 0;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+}
+
+/* === Theme-specific styling === */
+body.spiritual .back-button {
+  background: linear-gradient(90deg, #6b5b95, #a18fc3);
+  color: #f0eaff;
+}
+
+body.light-spiritual .back-button {
+  background: linear-gradient(90deg, #e4dbf9, #d6efff);
+  color: #4a3a6a;
+}
+
+body.guardians .back-button {
+  background: linear-gradient(90deg, #6ea68b, #bed9b3);
+  color: #1e3e30;
+}
+
+body.outcasts .back-button {
+  background: linear-gradient(90deg, #603131, #d2583e);
+  color: #fbe9e7;
+}
+
+
+/* === Back Button Wrapper === */
+
+.back-button-wrapper {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 30px;
 }
